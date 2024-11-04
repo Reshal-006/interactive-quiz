@@ -1,0 +1,92 @@
+<!-- QUIZ QUESTIONS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="style-page.css">
+</head>
+<body>
+    
+     <!-- Page with questions -->
+     <div class="quiz_box">
+        <header>
+            <div class="title">Trivia Quiz</div>
+
+            <div id="timer">
+                <div class="time_text">Time left</div>
+                <div id="countdown"></div>
+            </div>
+
+            <div id="time_line">
+
+            </div>
+
+        </header> <br>
+        <section id="questionSection">
+            <div id="que_text">
+
+            </div> <br>
+            <div>
+            
+                <button class="option_list">
+                <input type="radio" name="mcq" id="quiz1">
+                </button>
+                
+                <button class="option_list">
+                <input type="radio" name="mcq" id="quiz2">
+                </button>
+
+                <button class="option_list">
+                <input type="radio" name="mcq" id="quiz3">
+                </button>
+            
+                <button class="option_list">
+                <input type="radio" name="mcq" id="quiz4">
+                </button>
+             
+            </div>
+            <footer>
+                <span id="total_que"> 
+                    
+                </span>
+            <button id="next_btn">Next</button>
+            </footer>
+        </section>
+        
+        <div id="div_counter_box">
+            <div class="div_counter" id="div_counter1"></div>
+            <div class="div_counter" id="div_counter2"></div>
+            <div class="div_counter" id="div_counter3"></div>
+            <div class="div_counter" id="div_counter4"></div>
+            <div class="div_counter" id="div_counter5"></div>
+            <div class="div_counter" id="div_counter6"></div>
+            <div class="div_counter" id="div_counter7"></div>
+            <div class="div_counter" id="div_counter8"></div>
+            <div class="div_counter" id="div_counter9"></div>
+            <div class="div_counter" id="div_counter10"></div>
+        </div>
+
+        
+        <!-- Result Box -->
+        <div id="resultDiv">
+            <div id="result_box" style="display: none;">
+                <div id="complete_text">You've completed the Quiz!</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSA0IcZBgz4a7vSYc18nKpfDwfFW6Ml97Yywe129kbFHmNLnz5r-8OjcQgOsaMvZ6EaCs&usqp=CAU" alt="crown" id="crown_icon">
+                <div id="score_text"></div>
+                <div id="congrats"></div>
+            </div>   
+        </div>
+        <div id="end_gif" style="display: none;">
+            <img src="./assest.gif" alt="ballon" id="celeb">
+            <img height="600px" width="1000px" src="https://www.icegif.com/wp-content/uploads/2023/05/icegif-107.gif" alt="ending_wish" id="wish">
+        </div>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

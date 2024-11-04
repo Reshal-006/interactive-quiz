@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+*{
+    font-family: Nunito;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    /* background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e4316a93890387.5e70ade47b737.gif"); */
+    background-image: linear-gradient(#afe4f1, pink);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #c93d3d, 0 0 20px #fff, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 50px #ff2190, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 10 10 100px #c20c0c, 0 0 80px #e04191, 0 0 50px #f884be, 0 0 50px #dd1f7e, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    box-sizing: border-box;
+    animation: glow 1s ease-in-out infinite alternate;
+
+}
+
+
+#luck_message{
+    background-color: white;
+    font-size: 20px;
+    font-style: oblique;
+}
+
+.main_block{
+    box-sizing: border-box;
+    align-self: center;
+    background-color: white;
+    padding: 20px;
+    margin-left: 490px;
+    margin-right: 500px;
+    margin-top: 100px;
+    border-radius: 40px;
+    width: 500px;
+    height: 300px;
+    font-size: larger;
+    font-weight: 500;
+    box-shadow: 7px 7px 2px 2px rgb(80, 137, 212)
+}
+
+.main_block:hover{
+    cursor:progress;
+    transition-duration: 0.8s;
+    transform: scale(1.05);
+    box-shadow: 7px 7px 2px 2px #db7082;
+}
+
+#start_button{
+    cursor: pointer;
+    background-color: white;
+    border-style: hidden;
+    margin: 20px;
+    margin-left: 150px;
+    padding: 10px;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 80px;
+    position: absolute;
+    border: 2px solid pink;
+}
+
+#start_button:hover{
+    cursor: pointer;
+    border: 0px;
+    transform: scale(1.1);
+    transition-duration: 1s;
+    background-image: radial-gradient(rgba(175, 228, 214, 0.527), rgba(255, 192, 203, 0.527));
+}
+
