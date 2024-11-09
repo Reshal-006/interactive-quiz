@@ -144,16 +144,16 @@ const message = document.getElementById("congrats");
 const divBox = document.getElementById("div_counter_box");
 const gif = document.getElementById("end_gif");
 
-//code to make the timer run
+let totalTime = 15;  // Total time for the whole game in seconds
+
+// Timer functionality
 function updateTimer() {
-    countdown.textContent = `${timeLeft}s`;
-    if (currentQuestion<quizData.length){
-        if (timeLeft <= 0) {
-            nextButton.click(); 
-        }
-        timeLeft--;
+    countdown.textContent = ${totalTime}s;
+    if (totalTime <= 0) {
+        clearInterval(timerInterval);  // Stop the timer when time is up
+        nextButton.click();  // Trigger next question (or finish quiz if last question)
     }
-    
+    totalTime--;  // Decrease the timer every second
 }
 
 function stopTimer() {
@@ -161,8 +161,9 @@ function stopTimer() {
 }
 
 function resetTimer() {
-    timeLeft = 15;
+    totalTime = 15;  // Reset to 30 seconds at the start of the quiz
 }
+
 
 let div = document.querySelectorAll(".div_counter");
 function blockList() {
@@ -259,7 +260,7 @@ function loadQuestion(){
     questionContainer.textContent = questions.question;    
 
     let questionNumber = document.getElementById("total_que");
-    questionNumber.innerHTML = `<strong>Question ${currentQuestion + 1} of ${quizData.length}</strong>`;
+    questionNumber.innerHTML = <strong>Question ${currentQuestion + 1} of ${quizData.length}</strong>;
 }
 
 loadOptions ();
@@ -325,18 +326,18 @@ function showResult(){
     nextButton.style.display = "none";
     divBox.style.display = "none";
 
-    resultElement.innerHTML = `<strong><h2>Your Score is ${score} out of ${quizData.length}</h2></strong>`;
+    resultElement.innerHTML = <strong><h2>Your Score is ${score} out of ${quizData.length}</h2></strong>;
     resultElement.style.display = "block";
     gif.style.display = "block";
 
     if (score < 5){
-        message.innerHTML = `<strong><h2>Below average, better luck next time !</h2></strong>`
+        message.innerHTML = <strong><h2>Below average, better luck next time !</h2></strong>
     }
     if (score >= 5 && score < 8){
-        message.innerHTML = `<strong><h2>You did fairly well, aim higher now !</h2></strong>`
+        message.innerHTML = <strong><h2>You did fairly well, aim higher now !</h2></strong>
     }
     if (score >= 8){
-        message.innerHTML = `<strong><h2> Amazing! Keep it up</h2></strong>`
+        message.innerHTML = <strong><h2> Amazing! Keep it up</h2></strong>
     }
     setTimeout (() => { 
         const gif = document.getElementById("celeb");
@@ -349,6 +350,3 @@ function showResult(){
     },4000);
     
 }
-
-
-
